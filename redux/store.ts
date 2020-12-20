@@ -1,7 +1,7 @@
 import { Action, configureStore, Store } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import { ThunkAction } from 'redux-thunk';
-import postsReducer from '../redux/postsSlice';
+import postsReducer from './posts/postsSlice';
 
 const rootReducer = combineReducers({
   posts: postsReducer,

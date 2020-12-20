@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
-import { fetchPosts } from '../redux/postsSlice';
+import { fetchPosts } from '../redux/posts/postsSlice';
 import Router from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -18,7 +18,7 @@ export default function Home({}: IProps) {
     dispatch(fetchPosts());
   }, []);
 
-  const posts = useSelector(selectPosts);
+  const { posts, meta } = useSelector(selectPosts);
 
   const clickHandler = () => {
     Router.push('/posts/new');
