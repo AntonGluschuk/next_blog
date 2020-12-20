@@ -10,11 +10,11 @@ import { PostResponseType } from '../pages/api/types';
 // }
 
 interface IPostsState {
-  posts: PostResponseType[];
+  allPosts: PostResponseType[];
 }
 
 const initialState: IPostsState = {
-  posts: [],
+  allPosts: [],
 };
 
 export const postsSlice = createSlice({
@@ -22,7 +22,7 @@ export const postsSlice = createSlice({
   initialState,
   reducers: {
     loadPosts(state, action: PayloadAction<PostResponseType[]>) {
-      state.posts = action.payload;
+      state.allPosts = action.payload;
     },
   },
 });
@@ -35,6 +35,7 @@ export const fetchPosts = (): AppThunk => async (dispatch) => {
   try {
     const posts = await getPosts();
     const loadedPosts = posts.data.content.map((post) => post);
+    console.log(posts);
     dispatch(loadPosts(loadedPosts));
   } catch (e) {
     console.log(e);

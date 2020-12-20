@@ -7,5 +7,3 @@ export type PostResponseType = {
 export type GetResponseType<T> = {
   content: T[];
 };
-
-// export type GetPostResponseType = PostResponseType[];
