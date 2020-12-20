@@ -2,11 +2,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
-interface Props {
+interface IProps {
   children: ReactNode;
 }
 
-export function MainLayout({ children }: Props) {
+export function MainLayout({ children }: IProps) {
   return (
     <>
       <Head>

@@ -2,9 +2,9 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { MainLayout } from '../../components/MainLayout';
 
-interface Props {}
+interface IProps {}
 
-export default function Post({}: Props) {
+export default function Post({}: IProps) {
   const router = useRouter();
   return (
     <MainLayout>

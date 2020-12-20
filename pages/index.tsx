@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { MainLayout } from '../components/MainLayout';
 
-interface Props {}
+interface IProps {}
 
-export default function Home({}: Props) {
+export default function Home({}: IProps) {
   const clickHandler = () => {
     Router.push('/posts/new');
   };

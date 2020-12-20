@@ -2,9 +2,9 @@ import Head from 'next/head';
 import Router from 'next/router';
 import { MainLayout } from '../../components/MainLayout';
 
-interface Props {}
+interface IProps {}
 
-export default function NewPost({}: Props) {
+export default function NewPost({}: IProps) {
   const clickHandler = () => {
     Router.push('/');
   };
