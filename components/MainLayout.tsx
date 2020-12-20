@@ -1,7 +1,12 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { ReactNode } from 'react';
 
-export function MainLayout({ children }) {
+interface Props {
+  children: ReactNode;
+}
+
+export function MainLayout({ children }: Props) {
   return (
     <>
       <Head>
